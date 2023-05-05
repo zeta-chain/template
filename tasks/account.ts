@@ -4,9 +4,10 @@ import * as envfile from "envfile";
 import * as fs from "fs";
 
 const main = async ({ save }: any, hre: HardhatRuntimeEnvironment) => {
-  const { privateKey, address } = hre.ethers.Wallet.createRandom();
+  const { privateKey, address, mnemonic } = hre.ethers.Wallet.createRandom();
   console.log(`\n🔑 Private key: ${privateKey}`);
-  console.log(`😃 Address: ${address}\n`);
+  console.log(`🔐 Mnemonic phrase: ${mnemonic.phrase}`);
+  console.log(`\n😃 Address: ${address}\n`);
   if (save) {
     const p = ".env";
     let env = envfile.parse(fs.existsSync(p) ? fs.readFileSync(p, "utf8") : "");
