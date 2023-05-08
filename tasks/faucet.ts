@@ -12,13 +12,13 @@ const getRecipientAddress = (args: any, hre: HardhatRuntimeEnvironment) => {
 
   if (process.env.PRIVATE_KEY) {
     const address = new hre.ethers.Wallet(process.env.PRIVATE_KEY).address;
-    const descNote = `Using address derived from the PRIVATE_KEY env variable: ${address}`;
-    console.log(descNote);
+    const noteMsg = `Using address derived from the PRIVATE_KEY env variable: ${address}`;
+    console.log(noteMsg);
     return address;
   }
 
-  const descError = `❌ Error: please, provide an address as a flag or create a wallet with: npx hardhat account --save`;
-  console.error(descError);
+  const errMsg = `❌ Error: please, provide an address as a flag or create a wallet with: npx hardhat account --save`;
+  console.error(errMsg);
 };
 
 const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
