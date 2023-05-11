@@ -946,6 +946,16 @@
   resolved "https://registry.yarnpkg.com/@zetachain/addresses-tools/-/addresses-tools-0.0.7.tgz#9775318f2ec734638f2ffa506eb5027278025801"
   integrity sha512-9BGvNz+5H1CdQCFDS6cnL/IlQRbw8RcK8MKCUDb77h7AnvxD60HPObMO8dSelSMdwopj+7nxRlJtse5YkApREg==
 
+"@zetachain/addresses@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@zetachain/addresses/-/addresses-0.0.9.tgz#d8ad93242590c0a6d028be8f515ad9f84fd588c2"
+  integrity sha512-MA/kD8a2NY5xJMFjwPj1oph6P3O7l0g23QB3QTgcBs4DdmwubvTVH6S6/e8CWzLFojTP5qBiqIWBsU0iHP/HFg==
+
+"@zetachain/interfaces@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@zetachain/interfaces/-/interfaces-0.0.1.tgz#dbbb7b1abcb63d9297a3d320178036a4aa8026b1"
+  integrity sha512-50Ecu1FeBOFbKyLwZ2yu/9fe8JwdXhGtrISmwuChLswKWQxqATmmex2kzoFhUywXrVKGOh/q4Jyn0kzWxXH/wQ==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
