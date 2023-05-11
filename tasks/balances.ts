@@ -52,7 +52,7 @@ async function fetchZetaBalance(
 }
 
 const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
-  let address;
+  let address: string;
   if (args.address) {
     address = args.address;
   } else if (process.env.PRIVATE_KEY) {
@@ -61,9 +61,7 @@ const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
     return console.error(walletError);
   }
 
-  let balances: any[] = [];
-
-  for (const networkName in hre.config.networks) {
+  const fetchBalances = async (networkName: string) => {
     try {
       const { url } = hre.config.networks[networkName];
       const provider = new ethers.providers.JsonRpcProvider(url);
@@ -71,16 +69,20 @@ const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
       const native = await fetchNativeBalance(address, provider);
       const zeta = await fetchZetaBalance(address, provider, networkName);
 
-      balances.push({ networkName, native, zeta });
+      return { networkName, native, zeta };
     } catch (error) {
-      continue;
+      return null;
     }
-  }
+  };
+
+  const balancePromises = Object.keys(hre.config.networks).map(fetchBalances);
+  const balances = await Promise.all(balancePromises);
+  const filteredBalances = balances.filter((balance) => balance !== null);
 
   console.log(`
 📊 Balances for ${address}
 `);
-  console.table(balances);
+  console.table(filteredBalances);
 };
 
 const descTask = "Fetch native and ZETA token balances";
