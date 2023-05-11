@@ -7,47 +7,80 @@ import ZetaEth from "@zetachain/interfaces/abi/json/contracts/Zeta.eth.sol/ZetaE
 
 dotenv.config();
 
+const walletError = `
+❌ Error: Wallet address not found.
+
+To resolve this issue, please follow these steps:
+
+* Set your PRIVATE_KEY environment variable. You can write
+  it to a .env file in the root of your project like this:
+
+  PRIVATE_KEY=123... (without the 0x prefix)
+  
+  Or you can generate a new private key by running:
+
+  npx hardhat account --save
+
+* Alternatively, you can fetch the balance of any address
+  by using the --address flag:
+  
+  npx hardhat balances --address <wallet_address>
+`;
+
+async function fetchNativeBalance(
+  address: string,
+  provider: ethers.providers.JsonRpcProvider
+) {
+  const balance = await provider.getBalance(address);
+  return parseFloat(ethers.utils.formatEther(balance)).toFixed(2);
+}
+
+async function fetchZetaBalance(
+  address: string,
+  provider: ethers.providers.JsonRpcProvider,
+  networkName: string
+) {
+  if (networkName === "athens") return "";
+  const zetaAddress = getAddress({
+    address: "zetaToken",
+    networkName,
+    zetaNetwork: "athens",
+  });
+  const contract = new ethers.Contract(zetaAddress, ZetaEth, provider);
+  const balance = await contract.balanceOf(address);
+  return parseFloat(ethers.utils.formatEther(balance)).toFixed(2);
+}
+
 const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
   let address;
   if (args.address) {
-    [address] = args;
+    address = args.address;
   } else if (process.env.PRIVATE_KEY) {
-    [address] = new hre.ethers.Wallet(process.env.PRIVATE_KEY);
+    address = new hre.ethers.Wallet(process.env.PRIVATE_KEY).address;
   } else {
-    throw new Error("Please set PRIVATE_KEY. Run: npx hardhat account --save");
+    return console.error(walletError);
   }
 
-  console.log(address);
+  let balances: any[] = [];
 
-  //   let balances: any[] = [];
+  for (const networkName in hre.config.networks) {
+    try {
+      const { url } = hre.config.networks[networkName];
+      const provider = new ethers.providers.JsonRpcProvider(url);
 
-  //   for (const networkName in hre.config.networks) {
-  //     try {
-  //       const { url } = hre.config.networks[networkName];
-  //       const zetaAddress = getAddress({
-  //         address: "zetaToken",
-  //         networkName,
-  //         zetaNetwork: "athens",
-  //       });
-  //       const provider = new ethers.providers.JsonRpcProvider(url);
+      const native = await fetchNativeBalance(address, provider);
+      const zeta = await fetchZetaBalance(address, provider, networkName);
 
-  //       const nb = await provider.getBalance(address);
-  //       const native = parseFloat(ethers.utils.formatEther(nb)).toFixed(2);
+      balances.push({ networkName, native, zeta });
+    } catch (error) {
+      continue;
+    }
+  }
 
-  //       const zetaContract = new ethers.Contract(zetaAddress, ZetaEth, provider);
-  //       const zb = await zetaContract.balanceOf(address);
-  //       const zeta = parseFloat(ethers.utils.formatEther(zb)).toFixed(2);
-
-  //       balances.push({ networkName, native, zeta });
-  //     } catch (error) {
-  //       continue;
-  //     }
-  //   }
-
-  //   console.log(`
-  // 📊 Balances for ${address}
-  // `);
-  //   console.table(balances);
+  console.log(`
+📊 Balances for ${address}
+`);
+  console.table(balances);
 };
 
 const descTask = "Fetch native and ZETA token balances";
