@@ -34,7 +34,6 @@ const descTask = `Request ZETA tokens from the faucet. If --address flag is not 
 const descAddressFlag = `Recipient address where tokens will be sent. (default: address derived from PRIVATE_KEY env variable)`;
 const descChainFlag = `Blockchain network where tokens will be sent.`;
 
-task("faucet", descTask)
+task("faucet", descTask, main)
   .addOptionalParam("address", descAddressFlag)
-  .addParam("chain", descChainFlag, "zetachain_athens")
-  .setAction(main);
+  .addParam("chain", descChainFlag, "zetachain_athens");
