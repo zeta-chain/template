@@ -2,36 +2,55 @@ import { task } from "hardhat/config";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import * as dotenv from "dotenv";
 import { drip } from "@zetachain/faucet-cli/dist/commands/drip";
+import { VALID_CHAINS } from "@zetachain/faucet-cli/dist/constants";
 
 dotenv.config();
+
+const walletError = `
+❌ Error: Wallet address not found.
+
+To resolve this issue, please follow these steps:
+
+* Set your PRIVATE_KEY environment variable. You can write
+  it to a .env file in the root of your project like this:
+
+  PRIVATE_KEY=123... (without the 0x prefix)
+  
+  Or you can generate a new private key by running:
+
+  npx hardhat account --save
+
+* Alternatively, you can request tokens for any address
+  by using the --address flag:
+  
+  npx hardhat faucet --address <wallet_address>
+`;
 
 const getRecipientAddress = (args: any, hre: HardhatRuntimeEnvironment) => {
   if (args.address) {
     return args.address;
+  } else if (process.env.PRIVATE_KEY) {
+    return new hre.ethers.Wallet(process.env.PRIVATE_KEY).address;
+  } else {
+    console.error(walletError);
+    throw new Error();
   }
-
-  if (process.env.PRIVATE_KEY) {
-    const address = new hre.ethers.Wallet(process.env.PRIVATE_KEY).address;
-    const noteMsg = `Using address derived from the PRIVATE_KEY env variable: ${address}`;
-    console.log(noteMsg);
-    return address;
-  }
-
-  const errMsg = `❌ Error: please, provide an address as a flag or create a wallet with: npx hardhat account --save`;
-  console.error(errMsg);
 };
 
 const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
+  if (!VALID_CHAINS.includes(args.chain)) {
+    const chainNameError = `❌ Invalid chain: ${args.chain}. Must be one of: ${VALID_CHAINS}`;
+    return console.error(chainNameError);
+  }
+
   try {
     const address = getRecipientAddress(args, hre);
     await drip({ chain: args.chain, address }, []);
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {}
 };
 
-const descTask = `Request ZETA tokens from the faucet. If --address flag is not set, the faucet will default to the address derived from the wallet defined in PRIVATE_KEY env variable. If you don't have a wallet yet, use npx hardhat account --save to create a wallet in .env. Valid values for --chain flag are: zetachain_athens, goerli, bsc_testnet, polygon_mumbai. You can install a standalone version of the CLI faucet with: npm i -g @zetachain/faucet-cli`;
-const descAddressFlag = `Recipient address where tokens will be sent. (default: address derived from PRIVATE_KEY env variable)`;
+const descTask = `Request ZETA tokens from the faucet on a specific chain.`;
+const descAddressFlag = `Recipient address. (default: address derived from PRIVATE_KEY env variable)`;
 const descChainFlag = `Blockchain network where tokens will be sent.`;
 
 task("faucet", descTask, main)

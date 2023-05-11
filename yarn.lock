@@ -987,7 +987,7 @@
   resolved "https://registry.yarnpkg.com/@zetachain/addresses-tools/-/addresses-tools-0.0.7.tgz#9775318f2ec734638f2ffa506eb5027278025801"
   integrity sha512-9BGvNz+5H1CdQCFDS6cnL/IlQRbw8RcK8MKCUDb77h7AnvxD60HPObMO8dSelSMdwopj+7nxRlJtse5YkApREg==
 
-"@zetachain/faucet-cli@^1.3.5":
+"@zetachain/faucet-cli@1.3.5":
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/@zetachain/faucet-cli/-/faucet-cli-1.3.5.tgz#8788b18e10d8539a15f7a04629b2ef64fa360a0c"
   integrity sha512-cZjjw8nVy09cZ9ZVkrvemaaI3erX56vh9uWUk/1AHmuAGAPoKpApPknfl5va6qA7Lv+G4Va2gcVlSp6N8YJKJg==

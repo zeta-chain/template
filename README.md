@@ -45,6 +45,18 @@ file, run the following command in your terminal:
 npx hardhat faucet
 ```
 
+To install a standalone faucet, run the following command in your terminal:
+
+```
+npm install -g @zetachain/faucet-cli
+```
+
+You can then use it with the following command:
+
+```
+zetafaucet -h
+```
+
 ## Next Steps
 
 To learn more about building decentralized apps on ZetaChain, follow the
