@@ -36,6 +36,24 @@ terminal, and save the private key to a `.env` file to make it accessible to
 Hardhat. If you don't want to save the wallet (for example, if you just need an
 address to send tokens to), you can run the command without the `--save` flag.
 
+### Querying for Token Balances
+
+To query for token balances, run the following command in your terminal:
+
+```
+npx hardhat balances
+```
+
+This command will query token balances for the account address derived from the
+private key specified in the `.env`.
+
+If you want to query for token balances for a different account, you can use the
+`--address` flag:
+
+```
+npx hardhat balances --address <address>
+```
+
 ### Requesting Tokens from the Faucet
 
 To request tokens from ZetaChain's faucet using the account from the `.env`
