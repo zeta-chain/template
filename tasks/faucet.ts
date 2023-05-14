@@ -3,13 +3,25 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 import * as dotenv from "dotenv";
 import { drip } from "@zetachain/faucet-cli/dist/commands/drip";
 import { VALID_CHAINS } from "@zetachain/faucet-cli/dist/constants";
-import { walletError } from "./balances";
 
-const useAFlagError = `
-* Alternatively, you can request tokens for any address
+const walletError = `
+❌ Error: Wallet address not found.
+
+To resolve this issue, please follow these steps:
+
+* Set your PRIVATE_KEY environment variable. You can write
+  it to a .env file in the root of your project like this:
+
+  PRIVATE_KEY=123... (without the 0x prefix)
+  
+  Or you can generate a new private key by running:
+
+  npx hardhat account --save
+
+* Alternatively, you can fetch the balance of any address
   by using the --address flag:
   
-  npx hardhat faucet --address <wallet_address>
+  npx hardhat balances --address <wallet_address>
 `;
 
 const getRecipientAddress = (args: any, hre: HardhatRuntimeEnvironment) => {
@@ -18,7 +30,7 @@ const getRecipientAddress = (args: any, hre: HardhatRuntimeEnvironment) => {
   } else if (process.env.PRIVATE_KEY) {
     return new hre.ethers.Wallet(process.env.PRIVATE_KEY).address;
   } else {
-    console.error(walletError + useAFlagError);
+    console.error(walletError);
     throw new Error();
   }
 };
