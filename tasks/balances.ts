@@ -5,9 +5,7 @@ import { ethers } from "ethers";
 import { getAddress } from "@zetachain/addresses";
 import ZetaEth from "@zetachain/interfaces/abi/json/contracts/Zeta.eth.sol/ZetaEth.json";
 
-dotenv.config();
-
-const walletError = `
+export const walletError = `
 ❌ Error: Wallet address not found.
 
 To resolve this issue, please follow these steps:
@@ -20,7 +18,9 @@ To resolve this issue, please follow these steps:
   Or you can generate a new private key by running:
 
   npx hardhat account --save
+`;
 
+const useAFlagError = `
 * Alternatively, you can fetch the balance of any address
   by using the --address flag:
   
@@ -51,6 +51,20 @@ async function fetchZetaBalance(
   return parseFloat(ethers.utils.formatEther(balance)).toFixed(2);
 }
 
+async function fetchBalances(
+  address: string,
+  provider: ethers.providers.JsonRpcProvider,
+  networkName: string
+) {
+  try {
+    const { url } = hre.config.networks[networkName];
+    const native = await fetchNativeBalance(address, provider);
+    const zeta = await fetchZetaBalance(address, provider, networkName);
+
+    return { networkName, native, zeta };
+  } catch (error) {}
+}
+
 const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
   let address: string;
   if (args.address) {
@@ -58,26 +72,19 @@ const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
   } else if (process.env.PRIVATE_KEY) {
     address = new hre.ethers.Wallet(process.env.PRIVATE_KEY).address;
   } else {
-    return console.error(walletError);
+    return console.error(walletError + useAFlagError);
   }
 
-  const fetchBalances = async (networkName: string) => {
-    try {
+  const balancePromises = Object.keys(hre.config.networks).map(
+    (networkName) => {
       const { url } = hre.config.networks[networkName];
       const provider = new ethers.providers.JsonRpcProvider(url);
-
-      const native = await fetchNativeBalance(address, provider);
-      const zeta = await fetchZetaBalance(address, provider, networkName);
-
-      return { networkName, native, zeta };
-    } catch (error) {
-      return null;
+      return fetchBalances(address, provider, networkName);
     }
-  };
+  );
 
-  const balancePromises = Object.keys(hre.config.networks).map(fetchBalances);
   const balances = await Promise.all(balancePromises);
-  const filteredBalances = balances.filter((balance) => balance !== null);
+  const filteredBalances = balances.filter((balance) => balance != null);
 
   console.log(`
 📊 Balances for ${address}
