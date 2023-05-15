@@ -2,19 +2,27 @@ import { task } from "hardhat/config";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import * as envfile from "envfile";
 import * as fs from "fs";
+import * as path from "path";
 
-const main = async ({ save }: any, hre: HardhatRuntimeEnvironment) => {
+const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
   const { privateKey, address, mnemonic } = hre.ethers.Wallet.createRandom();
-  console.log(`\n🔑 Private key: ${privateKey}`);
-  console.log(`🔐 Mnemonic phrase: ${mnemonic.phrase}`);
-  console.log(`\n😃 Address: ${address}\n`);
-  if (save) {
-    const p = ".env";
-    let env = envfile.parse(fs.existsSync(p) ? fs.readFileSync(p, "utf8") : "");
+  console.log(`
+🔑 Private key: ${privateKey}
+🔐 Mnemonic phrase: ${mnemonic.phrase}
+😃 Address: ${address}
+`);
+
+  if (args.save) {
+    const filePath = path.join(process.cwd(), ".env");
+    let env = envfile.parse(
+      fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf8") : ""
+    );
     env.PRIVATE_KEY = privateKey.slice(2);
-    fs.writeFileSync(p, envfile.stringify(env));
-    console.log(`✅ Saved the private key to '${p}' file.\n`);
+    fs.writeFileSync(filePath, envfile.stringify(env));
+    console.log(`✅ Saved the private key to '${filePath}' file.\n`);
   }
 };
+const descTask = `Generates a new account and prints its private key, mnemonic phrase, and address to the console.`;
+const descSaveFlag = `Saves the private key to a '.env' file in the project directory.`;
 
-task("account", "").addFlag("save").setAction(main);
+task("account", descTask, main).addFlag("save", descSaveFlag);

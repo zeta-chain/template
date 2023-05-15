@@ -5,8 +5,6 @@ import { ethers } from "ethers";
 import { getAddress } from "@zetachain/addresses";
 import ZetaEth from "@zetachain/interfaces/abi/json/contracts/Zeta.eth.sol/ZetaEth.json";
 
-dotenv.config();
-
 const walletError = `
 ❌ Error: Wallet address not found.
 
@@ -51,6 +49,20 @@ async function fetchZetaBalance(
   return parseFloat(ethers.utils.formatEther(balance)).toFixed(2);
 }
 
+async function fetchBalances(
+  address: string,
+  provider: ethers.providers.JsonRpcProvider,
+  networkName: string
+) {
+  try {
+    const { url } = hre.config.networks[networkName];
+    const native = await fetchNativeBalance(address, provider);
+    const zeta = await fetchZetaBalance(address, provider, networkName);
+
+    return { networkName, native, zeta };
+  } catch (error) {}
+}
+
 const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
   let address: string;
   if (args.address) {
@@ -61,23 +73,16 @@ const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
     return console.error(walletError);
   }
 
-  const fetchBalances = async (networkName: string) => {
-    try {
+  const balancePromises = Object.keys(hre.config.networks).map(
+    (networkName) => {
       const { url } = hre.config.networks[networkName];
       const provider = new ethers.providers.JsonRpcProvider(url);
-
-      const native = await fetchNativeBalance(address, provider);
-      const zeta = await fetchZetaBalance(address, provider, networkName);
-
-      return { networkName, native, zeta };
-    } catch (error) {
-      return null;
+      return fetchBalances(address, provider, networkName);
     }
-  };
+  );
 
-  const balancePromises = Object.keys(hre.config.networks).map(fetchBalances);
   const balances = await Promise.all(balancePromises);
-  const filteredBalances = balances.filter((balance) => balance !== null);
+  const filteredBalances = balances.filter((balance) => balance != null);
 
   console.log(`
 📊 Balances for ${address}
@@ -85,7 +90,7 @@ const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
   console.table(filteredBalances);
 };
 
-const descTask = "Fetch native and ZETA token balances";
-const descAddressFlag = "Fetch balances for a specific address";
+const descTask = `Fetch native and ZETA token balances`;
+const descAddressFlag = `Fetch balances for a specific address`;
 
 task("balances", descTask, main).addOptionalParam("address", descAddressFlag);

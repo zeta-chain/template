@@ -4,8 +4,6 @@ import * as dotenv from "dotenv";
 import { drip } from "@zetachain/faucet-cli/dist/commands/drip";
 import { VALID_CHAINS } from "@zetachain/faucet-cli/dist/constants";
 
-dotenv.config();
-
 const walletError = `
 ❌ Error: Wallet address not found.
 
@@ -20,10 +18,10 @@ To resolve this issue, please follow these steps:
 
   npx hardhat account --save
 
-* Alternatively, you can request tokens for any address
+* Alternatively, you can fetch the balance of any address
   by using the --address flag:
   
-  npx hardhat faucet --address <wallet_address>
+  npx hardhat balances --address <wallet_address>
 `;
 
 const getRecipientAddress = (args: any, hre: HardhatRuntimeEnvironment) => {
