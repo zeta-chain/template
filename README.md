@@ -75,8 +75,27 @@ You can then use it with the following command:
 zetafaucet -h
 ```
 
+### Verifying a Contract
+
+You can verify a deployed contract with the following command:
+
+```
+npx hardhat verify:zeta --contract <address>
+```
+
+Select the contract to verify:
+
+```
+? Select a contract to verify: (Use arrow keys)
+  @zetachain/zevm-protocol-contracts/contracts/interfaces/IZRC20.sol:IZRC20
+  @zetachain/zevm-protocol-contracts/contracts/interfaces/zContract.sol:zContract
+❯ contracts/Withdraw.sol:Withdraw
+```
+
+After the confirmation the contract will be verified.
+
 ## Next Steps
 
 To learn more about building decentralized apps on ZetaChain, follow the
-tutorials available in on
+tutorials available in
 [the documentation](https://www.zetachain.com/docs/developers/overview/).
