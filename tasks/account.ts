@@ -1,7 +1,7 @@
-import { task } from "hardhat/config";
-import { HardhatRuntimeEnvironment } from "hardhat/types";
 import * as envfile from "envfile";
 import * as fs from "fs";
+import { task } from "hardhat/config";
+import { HardhatRuntimeEnvironment } from "hardhat/types";
 import * as path from "path";
 
 const main = async (args: any, hre: HardhatRuntimeEnvironment) => {

@@ -1,9 +1,9 @@
-import { task } from "hardhat/config";
-import { HardhatRuntimeEnvironment } from "hardhat/types";
-import * as dotenv from "dotenv";
-import { ethers } from "ethers";
 import { getAddress } from "@zetachain/addresses";
 import ZetaEth from "@zetachain/interfaces/abi/json/contracts/Zeta.eth.sol/ZetaEth.json";
+import * as dotenv from "dotenv";
+import { ethers } from "ethers";
+import { task } from "hardhat/config";
+import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 const walletError = `
 ❌ Error: Wallet address not found.
@@ -59,7 +59,7 @@ async function fetchBalances(
     const native = await fetchNativeBalance(address, provider);
     const zeta = await fetchZetaBalance(address, provider, networkName);
 
-    return { networkName, native, zeta };
+    return { native, networkName, zeta };
   } catch (error) {}
 }
 
