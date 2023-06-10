@@ -1,8 +1,8 @@
 import "@nomicfoundation/hardhat-toolbox";
 import "./tasks/account";
-import "./tasks/faucet";
-import "./tasks/balances";
 import "./tasks/verify";
+import "./tasks/balances";
+import "./tasks/faucet";
 
 import { getHardhatConfigNetworks } from "@zetachain/addresses-tools/dist/networks";
 import * as dotenv from "dotenv";
