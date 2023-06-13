@@ -1048,6 +1048,11 @@
   resolved "https://registry.yarnpkg.com/@zetachain/networks/-/networks-0.0.1.tgz#825b27cfb96cd156c079503de4253c8adf580275"
   integrity sha512-p646aIgX/3IHkauZlOZBKirRCMY+hyo3Og3IfJGC3tNkqjADt0wrcnizJrRIlXWVJGnlAW7tJPyXPzcfBh2Bwg==
 
+"@zetachain/protocol-contracts@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-0.0.7.tgz#a095cb440069fdb5e3832e3a72e1144da6b8dec4"
+  integrity sha512-NC9GdVkld7BwpMiPNXpS3fV4zWe6cfRvtDJmlWXCOwgRitqOe3uq4/ou98zM8rgSQhxDS5wrKrvJrVhyJP3clA==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
