@@ -4,7 +4,7 @@ import { getHardhatConfigNetworks } from "@zetachain/networks";
 import "@zetachain/toolkit/tasks";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.18",
+  solidity: "0.8.7",
   networks: {
     ...getHardhatConfigNetworks(),
   },
