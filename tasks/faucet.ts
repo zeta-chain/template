@@ -1,8 +1,8 @@
-import { task } from "hardhat/config";
-import { HardhatRuntimeEnvironment } from "hardhat/types";
-import * as dotenv from "dotenv";
 import { drip } from "@zetachain/faucet-cli/dist/commands/drip";
 import { VALID_CHAINS } from "@zetachain/faucet-cli/dist/constants";
+import * as dotenv from "dotenv";
+import { task } from "hardhat/config";
+import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 const walletError = `
 ❌ Error: Wallet address not found.
@@ -43,7 +43,7 @@ const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
 
   try {
     const address = getRecipientAddress(args, hre);
-    await drip({ chain: args.chain, address }, []);
+    await drip({ address, chain: args.chain }, []);
   } catch (error) {}
 };
 

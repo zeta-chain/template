@@ -1,9 +1,9 @@
+import select from "@inquirer/select";
+import axios from "axios";
+import FormData from "form-data";
 import { task } from "hardhat/config";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { getFullyQualifiedName } from "hardhat/utils/contract-names";
-import axios from "axios";
-import FormData from "form-data";
-import select from "@inquirer/select";
 
 const verifyURL = "https://server.sourcify.athens2.zetachain.com/verify";
 const queryURL =
@@ -28,8 +28,8 @@ const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
 
   const chosen = parseInt(
     await select({
-      message: "Select a contract to verify:",
       choices: names.map((name, i) => ({ name, value: i.toString() })),
+      message: "Select a contract to verify:",
     })
   );
   const [path, name] = names[chosen].split(":");
@@ -49,12 +49,12 @@ const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
   formData.append("chain", "7001");
   formData.append("chosenContract", chosen.toString());
   formData.append("files", Buffer.from(source), {
-    filename: `${name}.sol`,
     contentType: "text/plain",
+    filename: `${name}.sol`,
   });
   formData.append("files", Buffer.from(JSON.stringify(metadata)), {
-    filename: "metadata.json",
     contentType: "application/json",
+    filename: "metadata.json",
   });
 
   const headers = { headers: formData.getHeaders() };
