@@ -1334,10 +1334,10 @@
   resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-1.0.0-athens3.tgz#032a2884219b27bdbb3cef8162b7cbe5def9761f"
   integrity sha512-jZSUm2zYi7kOVXTdHKfGOVSZUD8SzSgNwK9Fz1+Uz9jRWNBsIGELnloBoS8DzD1EoUR99Dycwe9O6TP7t82avw==
 
-"@zetachain/toolkit@^1.0.1-athens3":
-  version "1.0.1-athens3"
-  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-1.0.1-athens3.tgz#40db2c9ac7e34722877f0172a7fcbeb4e63b8f1d"
-  integrity sha512-+cboM7/MaJUurB06L2dyuNLdhFwUFoCPOQq4NLD/UvF8SLWXKDvQJVz/Ga/cFI62DBtK+F5Jv+A+RXVfnHe/RQ==
+"@zetachain/toolkit@^1.0.2-athens3":
+  version "1.0.2-athens3"
+  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-1.0.2-athens3.tgz#6fabfdc8f9b06d02453ef218357e923e60725710"
+  integrity sha512-jHyvJYQGUPZdM5k4W+WouaR4nuUZmij2SNk4aZxJ9R+x5N/e5+I/BZUQVQ7uAHEs7mswhOioQm7XmZE310doKw==
   dependencies:
     "@inquirer/prompts" "^2.1.1"
     "@nomiclabs/hardhat-ethers" "^2.2.3"
