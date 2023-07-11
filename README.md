@@ -63,6 +63,11 @@ file, run the following command in your terminal:
 npx hardhat faucet
 ```
 
+To access the faucet, please authenticate with your GitHub account. Once
+authenticated, the tokens will be sent to your specified address. It's important
+to note that the faucet can only be called a limited number of times per day to
+prevent misuse and abuse of its resources.
+
 Alternatively, you can install a standalone faucet, run the following command in
 your terminal:
 
