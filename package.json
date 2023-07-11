@@ -29,7 +29,7 @@
     "@typescript-eslint/parser": "^5.59.9",
     "@zetachain/faucet-cli": "^2.0.1",
     "@zetachain/interfaces": "^0.0.1",
-    "@zetachain/networks": "^2.2.0-athens3",
+    "@zetachain/networks": "^2.3.0-athens3",
     "@zetachain/protocol-contracts": "^1.0.0-athens3",
     "@zetachain/toolkit": "^1.0.2-athens3",
     "axios": "^1.3.6",

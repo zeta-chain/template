@@ -1322,10 +1322,10 @@
   resolved "https://registry.yarnpkg.com/@zetachain/interfaces/-/interfaces-0.0.1.tgz#dbbb7b1abcb63d9297a3d320178036a4aa8026b1"
   integrity sha512-50Ecu1FeBOFbKyLwZ2yu/9fe8JwdXhGtrISmwuChLswKWQxqATmmex2kzoFhUywXrVKGOh/q4Jyn0kzWxXH/wQ==
 
-"@zetachain/networks@^2.2.0-athens3":
-  version "2.2.0-athens3"
-  resolved "https://registry.yarnpkg.com/@zetachain/networks/-/networks-2.2.0-athens3.tgz#321246fb97970ef6e6c8acf0c5f3405d3a4c21f0"
-  integrity sha512-9BYgjbOzOXvH9R8lyyk+voHV27+ClYsJh0lMovMBI1BdqWOBaFUJn/JRSmk39Qkcrc7/Nsb5eQd85VBLmOWmgQ==
+"@zetachain/networks@^2.3.0-athens3":
+  version "2.3.0-athens3"
+  resolved "https://registry.yarnpkg.com/@zetachain/networks/-/networks-2.3.0-athens3.tgz#bd3a490ae43ae730cee01deef6f9f4db028a3a74"
+  integrity sha512-hSzq84pQN7oJXi2KjtaL0fq/CcTwJBnSn/bvzP949dTV2A0SbTt5Gn1jzh1X0tsjb3/+7A+38moMibyU5kLjOQ==
   dependencies:
     dotenv "^16.1.4"
 
