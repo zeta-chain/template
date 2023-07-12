@@ -20,8 +20,8 @@ yarn
 
 ## Hardhat Tasks
 
-This template includes two Hardhat tasks that can be used to generate a random
-wallet and request tokens from ZetaChain's faucet.
+This template includes Hardhat tasks that can be used make it easier to build
+with ZetaChain.
 
 ### Generating a Random Wallet
 
@@ -63,10 +63,16 @@ file, run the following command in your terminal:
 npx hardhat faucet
 ```
 
-To install a standalone faucet, run the following command in your terminal:
+To access the faucet, please authenticate with your GitHub account. Once
+authenticated, the tokens will be sent to your specified address. It's important
+to note that the faucet can only be called a limited number of times per day to
+prevent misuse and abuse of its resources.
+
+Alternatively, you can install a standalone faucet, run the following command in
+your terminal:
 
 ```
-npm install -g @zetachain/faucet-cli
+yarn global add @zetachain/faucet-cli
 ```
 
 You can then use it with the following command:
