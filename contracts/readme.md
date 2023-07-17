@@ -1,1 +1,0 @@
-This directory contains your Solidity contracts.
