@@ -1352,20 +1352,15 @@
   dependencies:
     dotenv "^16.1.4"
 
-"@zetachain/protocol-contracts@^1.0.0-athens3":
-  version "1.0.0-athens3"
-  resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-1.0.0-athens3.tgz#032a2884219b27bdbb3cef8162b7cbe5def9761f"
-  integrity sha512-jZSUm2zYi7kOVXTdHKfGOVSZUD8SzSgNwK9Fz1+Uz9jRWNBsIGELnloBoS8DzD1EoUR99Dycwe9O6TP7t82avw==
-
 "@zetachain/protocol-contracts@^1.0.1-athens3":
   version "1.0.1-athens3"
   resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-1.0.1-athens3.tgz#50625f9cd493adf5c34215e671e141bdc47afc04"
   integrity sha512-qSf636dDBFZQWragbdphoQR1tH/SxKgzgXZWqBRGf16lavoMvcNMIlDerDIP81qK8ftV7el//adgOLvzXi8QFg==
 
-"@zetachain/toolkit@^1.0.7-athens3":
-  version "1.0.7-athens3"
-  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-1.0.7-athens3.tgz#8773488bd471513bd5ce04108aca6dde75af749c"
-  integrity sha512-LfP0HOLZLu0qgtsQOHdJGw4Mi+IZHRLvxIqNk7SYHJ6i++r95r5e6fOc5Y0T08xcxXs4KDGO0NkbB0TrTIaj8g==
+"@zetachain/toolkit@^1.0.8-athens3":
+  version "1.0.8-athens3"
+  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-1.0.8-athens3.tgz#6434450163db3d0a0977af2b6b8ba13dd92918c9"
+  integrity sha512-iSxo6hTmcYn9wVEsj+zZtrdySvASTpH/oGRBAaSW6aaIWPiU5fjVwxqOM/DsQhnne2Lgqr+xAUddRy4rFNlJDQ==
   dependencies:
     "@inquirer/prompts" "^2.1.1"
     "@nomiclabs/hardhat-ethers" "^2.2.3"
