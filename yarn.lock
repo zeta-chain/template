@@ -1327,7 +1327,7 @@
     "@uniswap/lib" "1.1.1"
     "@uniswap/v2-core" "1.0.0"
 
-"@zetachain/faucet-cli@^2.0.1":
+"@zetachain/faucet-cli@^2.0.1", "@zetachain/faucet-cli@^2.0.1-beta.2":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@zetachain/faucet-cli/-/faucet-cli-2.0.1.tgz#94b4316a6a62b0df781df40c6223a054338d46b6"
   integrity sha512-OS5RF+oLoRgQFQ3ZokXMQa6Bfdcrrzh8KBmnVIdT3FEJAfSPi9TCBfC6nNghvvDnjniIF31qsPlwlBwA9cioww==
@@ -1362,16 +1362,16 @@
   resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-1.0.1-athens3.tgz#50625f9cd493adf5c34215e671e141bdc47afc04"
   integrity sha512-qSf636dDBFZQWragbdphoQR1tH/SxKgzgXZWqBRGf16lavoMvcNMIlDerDIP81qK8ftV7el//adgOLvzXi8QFg==
 
-"@zetachain/toolkit@^1.0.5-athens3":
-  version "1.0.5-athens3"
-  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-1.0.5-athens3.tgz#fa6616ea521945f856397fcca77d6df6c29e9e4a"
-  integrity sha512-ZaJth8KIienkSkWx+7ZyWX6GlxtUZPbcPLgSYWiYbw4+t9gayqpkHxHkC7kBbaPvJa6x5zAnP0z96QUA6dIQkg==
+"@zetachain/toolkit@^1.0.6-athens3":
+  version "1.0.6-athens3"
+  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-1.0.6-athens3.tgz#32e8bfbf44be24e5c181c0854dd4590649197287"
+  integrity sha512-Q6YgaHDwk26KY0vuCNyI11A+BH0jGYGVXruljz2CogiaFypfazttw83xe14fv3gvPJjobkHzueYdaAGTBMeUzg==
   dependencies:
     "@inquirer/prompts" "^2.1.1"
     "@nomiclabs/hardhat-ethers" "^2.2.3"
     "@openzeppelin/contracts" "^4.9.2"
     "@uniswap/v2-periphery" "^1.1.0-beta.0"
-    "@zetachain/faucet-cli" "^2.0.1"
+    "@zetachain/faucet-cli" "^2.0.1-beta.2"
     "@zetachain/networks" "^2.3.0-athens3"
     "@zetachain/protocol-contracts" "^1.0.1-athens3"
     axios "^1.4.0"
