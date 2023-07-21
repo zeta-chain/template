@@ -1327,17 +1327,17 @@
     "@uniswap/lib" "1.1.1"
     "@uniswap/v2-core" "1.0.0"
 
-"@zetachain/faucet-cli@^2.0.1", "@zetachain/faucet-cli@^2.0.1-beta.2":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@zetachain/faucet-cli/-/faucet-cli-2.0.1.tgz#94b4316a6a62b0df781df40c6223a054338d46b6"
-  integrity sha512-OS5RF+oLoRgQFQ3ZokXMQa6Bfdcrrzh8KBmnVIdT3FEJAfSPi9TCBfC6nNghvvDnjniIF31qsPlwlBwA9cioww==
+"@zetachain/faucet-cli@^2.0.1-beta.2":
+  version "2.0.1-beta.2"
+  resolved "https://registry.yarnpkg.com/@zetachain/faucet-cli/-/faucet-cli-2.0.1-beta.2.tgz#32c143d849163844037f7bf0602355d557f11353"
+  integrity sha512-d9nlW5lHquWVZmSwJ+VuGB/TlkaMiP7J0arorKyDt3Rw6hjQ3twaGTlK+nOTqJAxo2gwyGNrZVECmX6dWBY7rw==
   dependencies:
     commander "10.0.1"
     figlet "1.6.0"
     got "11.8.5"
     launchdarkly-node-client-sdk "3.0.2"
     readline "1.3.0"
-    typescript "4.7.4"
+    typescript "5.0.4"
     zod "3.19.1"
 
 "@zetachain/interfaces@^0.0.1":
@@ -6322,7 +6322,7 @@ typescript@4.7.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
   integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
 
-typescript@>=4.5.0:
+typescript@5.0.4, typescript@>=4.5.0:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
   integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
