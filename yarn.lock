@@ -1395,10 +1395,10 @@
   resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-2.0.1.tgz#46101ca06115bcd43cbfc7b9437e1d3ecc91eac3"
   integrity sha512-XvtITedZ+3odIzO9wArnGE3yI0zHQOvumFydUgLeNDsAR+QeKloF7MUdN1toD6hYB3SgF4na/fpj+x6AdJe2Bg==
 
-"@zetachain/toolkit@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-2.0.0.tgz#b41ffe60ea26d34617671347926fb6cfb314a408"
-  integrity sha512-7MqrJ+oOyafWWEXE4OATF/1VUGTd95NMjhnco6G7kQs8Gp7a6kJxZjEyB9L4WYzUAkXeQKxdQYWTxo1t7QTLgA==
+"@zetachain/toolkit@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-2.0.1.tgz#a84146c82b462fb9cafc28ee48682b03d2ae7fa7"
+  integrity sha512-wDMCuN++CgHOWQvAwqlWG0erhjgvO/dxLYJpmotj3lO+47VVlLs8Iy6CoAQ9/zceSGJtiR6l9xMOTtQ1MmFDQw==
   dependencies:
     "@inquirer/prompts" "^2.1.1"
     "@nomiclabs/hardhat-ethers" "^2.2.3"
