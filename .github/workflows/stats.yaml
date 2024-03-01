@@ -1,0 +1,17 @@
+name: github-repo-stats
+
+on:
+  schedule:
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+jobs:
+  j1:
+    name: github-repo-stats
+    if: github.repository == 'zeta-chain/template'
+    runs-on: ubuntu-latest
+    steps:
+      - name: run-ghrs
+        uses: jgehrcke/github-repo-stats@RELEASE
+        with:
+          ghtoken: ${{ secrets.ghrs_github_api_token }}
