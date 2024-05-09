@@ -1368,7 +1368,7 @@
     table "^6.8.0"
     undici "^5.14.0"
 
-"@openzeppelin/contracts@^4.9.2":
+"@openzeppelin/contracts@^4.9.6":
   version "4.9.6"
   resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.9.6.tgz#2a880a24eb19b4f8b25adc2a5095f2aa27f39677"
   integrity sha512-xSmezSupL+y9VkHZJGDoCBpmnB2ogM13ccaYDWqJTfS3dbuHkgjuwDFUmaFauBCboQMGB/S5UqUl2y54X99BmA==
@@ -1789,10 +1789,10 @@
     typescript "5.0.4"
     zod "3.19.1"
 
-"@zetachain/networks@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@zetachain/networks/-/networks-6.0.0.tgz#ae5d3cd1678b32510edfaa71f8f4a6f4cbc1d9ab"
-  integrity sha512-yKFVP/yJDp76Q5lBGfZSpY/KO3TZ9ldo0lhE4MpBW43EsBxOZWixg6sqb56mcU/gg1lbWG8sHHWtYFK51SByjQ==
+"@zetachain/networks@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@zetachain/networks/-/networks-7.0.0.tgz#a5f8a188d633e2064ee7c77499351381ba891441"
+  integrity sha512-/amSq+KNJe+EGj0ioZS+DZJtsnbPSDotp9LsrAbaEVMAxKvBK/XkvggH73sJyRWWeMpfhHrNPlrKTLrN+mRkIg==
   dependencies:
     dotenv "^16.1.4"
 
@@ -1801,18 +1801,18 @@
   resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-7.0.0-rc1.tgz#588483d1ec70e572b7e40e84ef5b34282b0ab375"
   integrity sha512-vgS+Pjh4MysOyw8WbqTQVBsHJYqKvMcdV7cNVqxaTJd/dl2ak7NNvsIeaeUnxQrp8XfQol2B8GXJpVLM6MK/dg==
 
-"@zetachain/toolkit@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-6.0.0.tgz#385cfd11f1ac39cbb6ca6410109523e2ab6f8841"
-  integrity sha512-JAtl7CX8cMJ+iw/byjcbLqgCfPS87vkdYCZOPBBOudqUySPTz4owqVgGZB/xYRyXBsF0KW0F6R65sc+fleQ86A==
+"@zetachain/toolkit@8.0.0-rc1":
+  version "8.0.0-rc1"
+  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-8.0.0-rc1.tgz#f7ef34393e63a7e33c2e7b27c307b9423972151f"
+  integrity sha512-V0uqIQgfYDCg2Ni4ccy6Il3IdOjgOZ5nISTURidq4wocLDAPQHl0yoos9GoVqL5QYa49WLFFEL8lRXouU0qz3g==
   dependencies:
     "@inquirer/prompts" "^2.1.1"
     "@inquirer/select" "1.1.3"
     "@nomiclabs/hardhat-ethers" "^2.2.3"
-    "@openzeppelin/contracts" "^4.9.2"
+    "@openzeppelin/contracts" "^4.9.6"
     "@uniswap/v2-periphery" "^1.1.0-beta.0"
     "@zetachain/faucet-cli" "^4.0.1"
-    "@zetachain/networks" "6.0.0"
+    "@zetachain/networks" "7.0.0"
     "@zetachain/protocol-contracts" "7.0.0-rc1"
     axios "^1.4.0"
     bech32 "^2.0.0"
