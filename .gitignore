@@ -12,6 +12,5 @@ artifacts
 # Foundry files
 out/
 cache_forge/
-lib/
 
 access_token
