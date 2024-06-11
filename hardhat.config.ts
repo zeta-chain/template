@@ -1,5 +1,4 @@
 import "@nomicfoundation/hardhat-toolbox";
-import "@nomicfoundation/hardhat-foundry";
 import "@zetachain/toolkit/tasks";
 
 import { getHardhatConfigNetworks } from "@zetachain/networks";
