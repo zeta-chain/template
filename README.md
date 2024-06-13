@@ -21,10 +21,10 @@ yarn
 
 This template includes Hardhat tasks that streamline smart contract development.
 Learn more about the template and the functionality it provides
-[in the docs](https://www.zetachain.com/docs/developers/template/).
+[in the docs](https://www.zetachain.com/docs/developers/reference/template).
 
 ## Next Steps
 
 To learn more about building decentralized apps on ZetaChain, follow the
 tutorials available in
-[the introduction to ZetaChain](https://www.zetachain.com/docs/developers/overview/).
+[the introduction to ZetaChain](https://www.zetachain.com/docs/developers).
