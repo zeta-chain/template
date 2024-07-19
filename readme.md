@@ -30,11 +30,9 @@ uses Solidity and Hardhat and is compatible with Foundry. The contracts template
 leverages [`@zetachain/toolkit`](https://github.com/zeta-chain/toolkit) for
 helpers, tools, and tasks.
 
-> [!TIP]
->
-> Ready to dive in? Follow our [**🚀 smart contract
-> tutorials**](https://www.zetachain.com/docs/developers/tutorials/intro/) to
-> start building universal app contracts.
+Ready to dive in? Follow our [**🚀 smart contract
+tutorials**](https://www.zetachain.com/docs/developers/tutorials/intro/) to
+start building universal app contracts.
 
 ### Web
 
@@ -43,10 +41,8 @@ RainbowKit, and Wagmi. The web template utilizes the
 [`@zetachain/universalkit`](https://github.com/zeta-chain/universalkit)
 component library.
 
-> [!TIP]
->
-> To kick off your web app development, check out our [**🌎 frontend
-> tutorials**](https://www.zetachain.com/docs/developers/web/intro/).
+To kick off your web app development, check out our [**🌎 frontend
+tutorials**](https://www.zetachain.com/docs/developers/web/intro/).
 
 ## Contributing
 
