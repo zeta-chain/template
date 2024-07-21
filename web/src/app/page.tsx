@@ -8,7 +8,7 @@ import {
   Profile,
   useZetaChainClient,
   useEthersSigner,
-} from "@zeta-chain/universalkit/dist";
+} from "@zetachain/universalkit";
 import { useAccount, useChainId, useWalletClient } from "wagmi";
 
 const contract = "0xb459F14260D1dc6484CE56EB0826be317171e91F";
