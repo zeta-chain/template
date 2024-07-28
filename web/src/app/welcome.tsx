@@ -31,6 +31,7 @@ export const Welcome = () => {
           <Link
             href="https://zetachain.com/docs/developers/apps/intro"
             target="_blank"
+            rel="noopener noreferrer"
             className="dark:border-zeta-grey-600 hover:dark:border-transparent hover:dark:bg-zeta-grey-800 dark:shadow-none border border-zeta-grey-200 px-6 py-8 flex gap-4 rounded-lg hover:shadow-zeta-xl hover:border-transparent transition-all active:shadow-none active:border-zeta-grey-200"
           >
             <div>
@@ -53,6 +54,7 @@ export const Welcome = () => {
           <Link
             href="https://www.zetachain.com/docs/developers/frontend/universalkit/"
             target="_blank"
+            rel="noopener noreferrer"
             className="dark:border-zeta-grey-600 hover:dark:border-transparent hover:dark:bg-zeta-grey-800 dark:shadow-none border border-zeta-grey-200 px-6 py-8 flex gap-4 rounded-lg hover:shadow-zeta-xl hover:border-transparent transition-all active:shadow-none active:border-zeta-grey-200"
           >
             <div>
@@ -65,7 +67,7 @@ export const Welcome = () => {
                 Documentation
               </div>
               <div className="leading-tight text-zeta-grey-400 dark:text-zeta-grey-300">
-                UniversalKit components
+                Explore components
               </div>
             </div>
             <div className="flex items-end text-zeta-blue-700 dark:text-zeta-grey-50">
@@ -75,6 +77,7 @@ export const Welcome = () => {
           <Link
             href="https://discord.com/invite/zetachain"
             target="_blank"
+            rel="noopener noreferrer"
             className="dark:border-zeta-grey-600 hover:dark:border-transparent hover:dark:bg-zeta-grey-800 dark:shadow-none border border-zeta-grey-200 px-6 py-8 flex gap-4 rounded-lg hover:shadow-zeta-xl hover:border-transparent transition-all active:shadow-none active:border-zeta-grey-200"
           >
             <div>
