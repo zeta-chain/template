@@ -27,6 +27,8 @@ module.exports = {
         rainbowkit: "0px 4px 12px rgba(0, 0, 0, 0.1)",
         xl: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);",
         "2xl": "0 10px 50px -12px rgb(0 0 0 / 0.25);",
+        "zeta-xl":
+          "0px 18px 28px 0px rgba(9, 30, 66, 0.10), 0px 0px 1px 0px rgba(9, 30, 66, 0.20)",
       },
       colors: {
         bitcoin: "#f89414",
