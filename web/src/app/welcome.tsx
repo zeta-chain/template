@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 export const Welcome = () => {
+  const { theme } = useTheme();
+
   return (
     <div className="w-full flex justify-center">
       <div>
@@ -16,7 +19,7 @@ export const Welcome = () => {
                   <ZetaChain />
                 </div>
               </div>
-              <div className="text-zeta-grey-400 text-lg dark:text-zeta-grey-300">
+              <div className="text-zeta-grey-400 text-lg dark:text-zeta-grey-300 max-w-[448px]">
                 A robust ZetaChain component library of ready to use React
                 components that lets you build user interfaces for universal
                 apps.
@@ -24,7 +27,7 @@ export const Welcome = () => {
             </div>
           </div>
           <div className="order-1 md:order-2 flex items-center">
-            <Illustration />
+            {theme === "dark" ? <HeroDark /> : <HeroLight />}
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -32,11 +35,11 @@ export const Welcome = () => {
             href="https://zetachain.com/docs/developers/apps/intro"
             target="_blank"
             rel="noopener noreferrer"
-            className="dark:border-zeta-grey-600 hover:dark:border-transparent hover:dark:bg-zeta-grey-800 dark:shadow-none border border-zeta-grey-200 px-6 py-8 flex gap-4 rounded-lg hover:shadow-zeta-xl hover:border-transparent transition-all active:shadow-none active:border-zeta-grey-200"
+            className="group dark:border-zeta-grey-600 hover:dark:border-transparent hover:dark:bg-zeta-grey-800 dark:shadow-none border border-zeta-grey-200 px-6 py-8 flex gap-4 rounded-lg hover:shadow-zeta-xl hover:border-transparent transition-all active:shadow-none active:border-zeta-grey-200"
           >
             <div>
               <div className="flex rounded-md overflow-hidden">
-                <IconDoc />
+                <IconCircles />
               </div>
             </div>
             <div className="grow">
@@ -47,7 +50,7 @@ export const Welcome = () => {
                 Learn about universal apps
               </div>
             </div>
-            <div className="flex items-end text-zeta-blue-700 dark:text-zeta-grey-50">
+            <div className="flex items-end text-zeta-blue-700 dark:text-zeta-lime-700 dark:group-hover:text-zeta-mauve-700">
               <IconArrow />
             </div>
           </Link>
@@ -55,11 +58,11 @@ export const Welcome = () => {
             href="https://www.zetachain.com/docs/developers/frontend/universalkit/"
             target="_blank"
             rel="noopener noreferrer"
-            className="dark:border-zeta-grey-600 hover:dark:border-transparent hover:dark:bg-zeta-grey-800 dark:shadow-none border border-zeta-grey-200 px-6 py-8 flex gap-4 rounded-lg hover:shadow-zeta-xl hover:border-transparent transition-all active:shadow-none active:border-zeta-grey-200"
+            className="group dark:border-zeta-grey-600 hover:dark:border-transparent hover:dark:bg-zeta-grey-800 dark:shadow-none border border-zeta-grey-200 px-6 py-8 flex gap-4 rounded-lg hover:shadow-zeta-xl hover:border-transparent transition-all active:shadow-none active:border-zeta-grey-200"
           >
             <div>
               <div className="flex rounded-md overflow-hidden">
-                <IconCircles />
+                <IconDoc />
               </div>
             </div>
             <div className="grow">
@@ -70,7 +73,7 @@ export const Welcome = () => {
                 Explore components
               </div>
             </div>
-            <div className="flex items-end text-zeta-blue-700 dark:text-zeta-grey-50">
+            <div className="flex items-end text-zeta-blue-700 dark:text-zeta-lime-700 dark:group-hover:text-zeta-mauve-700">
               <IconArrow />
             </div>
           </Link>
@@ -78,7 +81,7 @@ export const Welcome = () => {
             href="https://discord.com/invite/zetachain"
             target="_blank"
             rel="noopener noreferrer"
-            className="dark:border-zeta-grey-600 hover:dark:border-transparent hover:dark:bg-zeta-grey-800 dark:shadow-none border border-zeta-grey-200 px-6 py-8 flex gap-4 rounded-lg hover:shadow-zeta-xl hover:border-transparent transition-all active:shadow-none active:border-zeta-grey-200"
+            className="group dark:border-zeta-grey-600 hover:dark:border-transparent hover:dark:bg-zeta-grey-800 dark:shadow-none border border-zeta-grey-200 px-6 py-8 flex gap-4 rounded-lg hover:shadow-zeta-xl hover:border-transparent transition-all active:shadow-none active:border-zeta-grey-200"
           >
             <div>
               <div className="flex rounded-md overflow-hidden">
@@ -93,7 +96,7 @@ export const Welcome = () => {
                 Join a thriving community
               </div>
             </div>
-            <div className="flex items-end text-zeta-blue-700 dark:text-zeta-grey-50">
+            <div className="flex items-end text-zeta-blue-700 dark:text-zeta-lime-700 dark:group-hover:text-zeta-mauve-700">
               <IconArrow />
             </div>
           </Link>
@@ -103,7 +106,7 @@ export const Welcome = () => {
   );
 };
 
-const Illustration = () => {
+const HeroLight = () => {
   return (
     <svg
       width="568"
@@ -444,6 +447,349 @@ const Illustration = () => {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M472.852 231.173H480.285V238.607H472.852V231.173ZM457.986 231.173H465.419V238.607H457.986V231.173ZM495.152 231.173H487.719V238.607H495.152V231.173Z"
+        fill="#B0FF61"
+      />
+    </svg>
+  );
+};
+
+const HeroDark = () => {
+  return (
+    <svg
+      width="534"
+      height="320"
+      viewBox="0 0 534 320"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="4"
+        y="208.502"
+        width="144.948"
+        height="111.498"
+        rx="8.91986"
+        fill="#00946E"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M128.878 218.863L133.338 223.323L137.798 218.863L138.587 219.652L134.127 224.112L138.587 228.571L137.798 229.36L133.338 224.9L128.878 229.36L128.09 228.571L132.55 224.112L128.09 219.652L128.878 218.863Z"
+        fill="white"
+      />
+      <rect
+        x="15.1499"
+        y="286.551"
+        width="122.648"
+        height="22.2997"
+        rx="4.45993"
+        fill="#B0FF61"
+      />
+      <rect
+        x="15.1499"
+        y="239.721"
+        width="122.648"
+        height="8.91986"
+        fill="#00BC8D"
+      />
+      <rect
+        x="15.1499"
+        y="253.101"
+        width="122.648"
+        height="8.91986"
+        fill="#00BC8D"
+      />
+      <rect
+        x="15.1499"
+        y="266.481"
+        width="66.899"
+        height="8.91986"
+        fill="#00BC8D"
+      />
+      <rect
+        x="373.059"
+        width="156.098"
+        height="49.0592"
+        rx="6.6899"
+        fill="#006579"
+      />
+      <ellipse
+        cx="397.589"
+        cy="24.5296"
+        rx="11.1498"
+        ry="11.1498"
+        fill="#B0FF61"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M498.123 20.7566L504.627 27.2607L511.131 20.7566L512.117 21.7421L505.12 28.7389C504.848 29.0111 504.406 29.0111 504.134 28.7389L497.137 21.7421L498.123 20.7566Z"
+        fill="white"
+      />
+      <path
+        d="M373.059 60.2091C373.059 56.5143 376.054 53.5192 379.749 53.5192H522.467C526.161 53.5192 529.157 56.5143 529.157 60.2091V98.1185H373.059V60.2091Z"
+        fill="#1F2328"
+      />
+      <ellipse
+        cx="397.589"
+        cy="78.0488"
+        rx="11.1498"
+        ry="11.1498"
+        fill="#00A5C6"
+      />
+      <rect
+        width="156.098"
+        height="40.1394"
+        transform="translate(373.059 98.1184)"
+        fill="#3C4146"
+      />
+      <ellipse
+        cx="397.589"
+        cy="118.188"
+        rx="11.1498"
+        ry="11.1498"
+        fill="#C241B6"
+      />
+      <path
+        d="M373.059 138.258H529.157V176.167C529.157 179.862 526.161 182.857 522.467 182.857H379.749C376.054 182.857 373.059 179.862 373.059 176.167V138.258Z"
+        fill="#1F2328"
+      />
+      <ellipse
+        cx="397.589"
+        cy="158.327"
+        rx="11.1498"
+        ry="11.1498"
+        fill="#00A87D"
+      />
+      <path
+        d="M497.624 126.128L514.453 137.976L506.183 140.954L499.47 146.626L497.624 126.128Z"
+        fill="#00A87D"
+      />
+      <rect
+        x="500.91"
+        y="134.294"
+        width="2.4715"
+        height="19.9205"
+        transform="rotate(-30 500.91 134.294)"
+        fill="#00A87D"
+      />
+      <path
+        d="M22.2996 19.2466C22.2996 15.3906 25.4254 12.2648 29.2814 12.2648H118.326V79.4835H29.2814C25.4254 79.4835 22.2996 76.3576 22.2996 72.5016V19.2466Z"
+        fill="#00A5C6"
+      />
+      <rect
+        x="118.328"
+        y="34.3505"
+        width="5.7616"
+        height="23.0464"
+        fill="#696E75"
+      />
+      <path
+        d="M118.327 34.3503V57.3968H83.0575C79.2016 57.3968 76.0757 54.2709 76.0757 50.4149V41.3322C76.0757 37.4762 79.2016 34.3503 83.0575 34.3503H118.327Z"
+        fill="white"
+      />
+      <circle cx="87.5992" cy="45.8737" r="4.80134" fill="#006579" />
+      <rect
+        y="62.439"
+        width="45.4102"
+        height="32.4359"
+        rx="16.2179"
+        fill="#9AEA4A"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M24.0006 77.3595V70.2238L21.4057 70.2238L21.4057 77.3595H14.2698V79.9544H21.4057L21.4057 87.0904H24.0006V79.9544H31.1364V77.3595H24.0006Z"
+        fill="black"
+      />
+      <rect
+        x="163.442"
+        width="187.317"
+        height="144.948"
+        rx="8.91986"
+        fill="#008462"
+      />
+      <rect
+        x="207.334"
+        y="21.1847"
+        width="125.161"
+        height="9.06145"
+        fill="#B0FF61"
+      />
+      <rect
+        x="207.334"
+        y="34.777"
+        width="125.161"
+        height="9.06145"
+        fill="#B0FF61"
+      />
+      <ellipse
+        cx="189.777"
+        cy="32.5115"
+        rx="8.49511"
+        ry="8.49511"
+        fill="#B0FF61"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M193.315 30.769L189.368 34.7162C189.112 34.9714 188.699 34.9714 188.443 34.7162L186.239 32.5116L187.163 31.5874L188.906 33.33L192.391 29.8448L193.315 30.769Z"
+        fill="black"
+      />
+      <ellipse
+        cx="189.777"
+        cy="72.1555"
+        rx="8.49511"
+        ry="8.49511"
+        fill="#00BC8D"
+      />
+      <rect
+        x="207.335"
+        y="60.8286"
+        width="125.161"
+        height="9.06145"
+        fill="#00BC8D"
+      />
+      <rect
+        x="207.335"
+        y="74.4209"
+        width="56.6341"
+        height="9.06145"
+        fill="#00BC8D"
+      />
+      <ellipse
+        cx="189.777"
+        cy="111.799"
+        rx="8.49511"
+        ry="8.49511"
+        fill="#00BC8D"
+      />
+      <rect
+        x="207.335"
+        y="100.473"
+        width="125.161"
+        height="9.06145"
+        fill="#00BC8D"
+      />
+      <rect
+        x="207.335"
+        y="114.065"
+        width="56.6341"
+        height="9.06145"
+        fill="#00BC8D"
+      />
+      <rect
+        x="4"
+        y="133.798"
+        width="222.997"
+        height="44.5993"
+        rx="22.2997"
+        fill="#006579"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M28.5298 146.899C24.6811 146.899 21.5611 150.019 21.5611 153.867C21.5611 157.716 24.6811 160.836 28.5298 160.836C32.3785 160.836 35.4984 157.716 35.4984 153.867C35.4984 150.019 32.3785 146.899 28.5298 146.899ZM19.8887 153.867C19.8887 149.095 23.7574 145.226 28.5298 145.226C33.3021 145.226 37.1709 149.095 37.1709 153.867C37.1709 155.952 36.4324 157.865 35.2028 159.358L41.9772 166.132L40.7946 167.315L34.0202 160.54C32.5274 161.77 30.6148 162.509 28.5298 162.509C23.7574 162.509 19.8887 158.64 19.8887 153.867Z"
+        fill="white"
+      />
+      <circle cx="66.4389" cy="156.098" r="4.45993" fill="#00C6EE" />
+      <circle cx="84.2788" cy="156.098" r="4.45993" fill="#00C6EE" />
+      <circle cx="102.118" cy="156.098" r="4.45993" fill="#00C6EE" />
+      <circle cx="119.958" cy="156.098" r="4.45993" fill="#00C6EE" />
+      <circle cx="137.798" cy="156.098" r="4.45993" fill="#00C6EE" />
+      <path
+        d="M171.247 265.366H349.645V313.31C349.645 317.005 346.649 320 342.955 320H177.937C174.242 320 171.247 317.005 171.247 313.31V265.366Z"
+        fill="#3C4146"
+      />
+      <path
+        d="M171.247 215.192C171.247 211.497 174.242 208.502 177.937 208.502H342.955C346.649 208.502 349.645 211.497 349.645 215.192V263.136H171.247V215.192Z"
+        fill="#3C4146"
+      />
+      <rect
+        x="235.917"
+        y="241.951"
+        width="44.5993"
+        height="44.5993"
+        rx="22.2997"
+        fill="#00BC8D"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M261.922 275.515H255.259C254.622 275.515 254.106 275.002 254.106 274.368L254.106 267.742H256.413V271.599L266.767 261.301L268.398 262.924L258.044 273.221H261.922V275.515Z"
+        fill="white"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M261.397 260.913V254.286C261.397 253.653 260.88 253.139 260.243 253.139L253.58 253.139V255.434L257.459 255.434L247.104 265.731L248.736 267.353L259.09 257.056V260.913H261.397Z"
+        fill="white"
+      />
+      <rect
+        x="309.505"
+        y="228.571"
+        width="26.7596"
+        height="15.6098"
+        rx="7.80488"
+        fill="#00BC8D"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M196.892 226.341H187.972V246.411H196.892V226.341ZM208.042 226.341H199.122V246.411H208.042V226.341Z"
+        fill="#2D3237"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M196.892 283.206H187.972V303.275H196.892V283.206ZM208.042 283.206H199.122V303.275H208.042V283.206Z"
+        fill="#2D3237"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M224.013 144.948H172.362C167.436 144.948 163.442 140.954 163.442 136.028V133.798H204.697C212.951 133.798 220.157 138.282 224.013 144.948Z"
+        fill="#005741"
+      />
+      <rect
+        x="346.584"
+        y="287.665"
+        width="166.504"
+        height="2.97329"
+        fill="#3C4146"
+      />
+      <rect
+        x="346.584"
+        y="287.665"
+        width="139.744"
+        height="2.97329"
+        fill="#00B8DD"
+      />
+      <path
+        d="M340.636 274.286L355.503 289.152L340.636 304.019L325.77 289.152L340.636 274.286Z"
+        fill="#00B8DD"
+      />
+      <path
+        d="M400.103 274.286L414.969 289.152L400.103 304.019L385.236 289.152L400.103 274.286Z"
+        fill="#00B8DD"
+      />
+      <path
+        d="M459.197 274.286L474.063 289.152L459.197 304.019L444.33 289.152L459.197 274.286Z"
+        fill="#00B8DD"
+      />
+      <path
+        d="M518.291 274.286L533.157 289.152L518.291 304.019L503.424 289.152L518.291 274.286Z"
+        fill="#3C4146"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M420.915 216.307C417.631 216.307 414.969 218.969 414.969 222.253V247.526C414.969 250.81 417.631 253.473 420.915 253.473H452.135L459.568 260.906L467.001 253.473H498.221C501.505 253.473 504.167 250.81 504.167 247.526V222.253C504.167 218.969 501.505 216.307 498.221 216.307H420.915Z"
+        fill="#00A5C6"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M455.852 231.173H463.285V238.607H455.852V231.173ZM440.986 231.173H448.419V238.607H440.986V231.173ZM478.152 231.173H470.719V238.607H478.152V231.173Z"
         fill="#B0FF61"
       />
     </svg>
