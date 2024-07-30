@@ -42,7 +42,9 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
           disableTransitionOnChange
         >
           <ThemeProvider>
-            <UniversalKitProvider>{children}</UniversalKitProvider>
+            <UniversalKitProvider config={config} client={queryClient}>
+              {children}
+            </UniversalKitProvider>
           </ThemeProvider>
         </NextThemesProvider>
       </QueryClientProvider>
