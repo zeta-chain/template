@@ -3067,6 +3067,13 @@
   dependencies:
     dotenv "^16.1.4"
 
+"@zetachain/networks@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@zetachain/networks/-/networks-9.0.0.tgz#59eddb02578d784a1d76299ead600dffce87f48c"
+  integrity sha512-vCSkzyiubgYHK0NAJFFCv9gQziGrB+BT9q6DEu29owWxHcGLHPbI4VJ5PbkWH+z8pExVSDe2wKxGN5l2ZAcbGA==
+  dependencies:
+    dotenv "^16.1.4"
+
 "@zetachain/protocol-contracts@8.0.0-rc1":
   version "8.0.0-rc1"
   resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-8.0.0-rc1.tgz#34df589c1b56df77f2695b37bd8a4b79df1787b1"
@@ -3077,10 +3084,10 @@
   resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-7.0.0.tgz#20eb6c62d805d7470408ccdff0e3614684bca174"
   integrity sha512-8JTNFZxVZYmDtAXJIEr+tkakuML12X42Fya4bJ1NkfWiVMkcSej92BSTl/35qYtHdjY7vXy9uMrfXEqfw5rsPw==
 
-"@zetachain/toolkit@^11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-11.0.0.tgz#3e6138082b1b8d2cbab7124d28204090c99555a2"
-  integrity sha512-gKQAHOcBPMRBnkn7mhshWTj5JRBJ5Y+TAiM2aCUmPpdEDgcxsnBcKbKsSVziop6QQjRwcjrG+6YM6GLnmLOJ3w==
+"@zetachain/toolkit@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-12.0.0.tgz#383b0ea165ca417ede01beb7617aa04aee7d82d4"
+  integrity sha512-3ZIXHaI3OMf7bAp91bryalmq6HEvYFjG8wTNjCGqyBYaK6oQafgH8+zkgrVotm6LmO9EDOZd2E1L4sPOyFS7Mw==
   dependencies:
     "@inquirer/prompts" "^2.1.1"
     "@inquirer/select" "1.1.3"
@@ -3088,7 +3095,7 @@
     "@openzeppelin/contracts" "^4.9.6"
     "@uniswap/v2-periphery" "^1.1.0-beta.0"
     "@zetachain/faucet-cli" "^4.0.1"
-    "@zetachain/networks" "^8.0.0"
+    "@zetachain/networks" "^9.0.0"
     "@zetachain/protocol-contracts" "8.0.0-rc1"
     axios "^1.4.0"
     bech32 "^2.0.0"
@@ -3110,10 +3117,10 @@
     tiny-secp256k1 "^2.2.3"
     ws "^8.13.0"
 
-"@zetachain/universalkit@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@zetachain/universalkit/-/universalkit-1.0.0.tgz#e10094cbadba9e5edcaf4cf5341f9316f023d280"
-  integrity sha512-cLqaxwg3jXLektmLtxtmjAzc3UKbSV6ToeP/H9K4H+ep3kUnVHoDM7gZbazEKevO4/aRIKyzbjmZagOWeG4eZg==
+"@zetachain/universalkit@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@zetachain/universalkit/-/universalkit-2.0.0.tgz#cb49036403181c7dcd30bef64de195646bc1425a"
+  integrity sha512-80WNBZJfOn8x3z9N+bCmsdNCb6+JWTCXJ1c0OuATZVBEAg1UHgNgooBo76gadjJtGwqxPU80LKMEpF6muOntXA==
   dependencies:
     "@evmos/provider" "0.3.1"
     "@evmos/transactions" "0.2.10"
@@ -3130,7 +3137,7 @@
     "@web3-name-sdk/core" "^0.2.0"
     "@zetachain/networks" "^8.0.0"
     "@zetachain/protocol-contracts" "^7.0.0"
-    "@zetachain/toolkit" "^11.0.0"
+    "@zetachain/toolkit" "^12.0.0"
     autoprefixer "^10.4.19"
     bech32 "^2.0.0"
     class-variance-authority "^0.7.0"
@@ -7404,6 +7411,7 @@ workerpool@^6.5.1:
   integrity sha512-Fs4dNYcsdpYSAfVxhnl1L5zTksjvOJxtC5hzMNl+1t9B8hTJTdKDyZ5ju7ztgPy+ft9tBFXoOlDNiOT9WUXZlA==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
