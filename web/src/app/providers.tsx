@@ -8,7 +8,7 @@ import {
   darkTheme,
   lightTheme,
 } from "@rainbow-me/rainbowkit";
-import { UniversalKitProvider, useEthersSigner } from "@zetachain/universalkit";
+import { UniversalKitProvider } from "@zetachain/universalkit";
 import { config } from "../wagmi";
 import { useTheme, ThemeProvider as NextThemesProvider } from "next-themes";
 
@@ -24,33 +24,8 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 };
 
 const WagmiWrapper = ({ children }: { children: React.ReactNode }) => {
-  const chainId = useChainId();
-  const { data: walletClient } = useWalletClient({ chainId });
-  const signer = useEthersSigner({ walletClient });
-
-  if (!signer) null;
-
-  const zetaConfig = {
-    network: "testnet",
-    signer,
-    chains: {
-      zeta_testnet: {
-        api: [
-          {
-            url: "https://zetachain-athens.g.allthatnode.com/archive/evm",
-            type: "evm",
-          },
-        ],
-      },
-    },
-  };
-
   return (
-    <UniversalKitProvider
-      config={config}
-      client={queryClient}
-      zetaChainConfig={zetaConfig}
-    >
+    <UniversalKitProvider config={config} client={queryClient}>
       {children}
     </UniversalKitProvider>
   );
