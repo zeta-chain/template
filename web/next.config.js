@@ -2,7 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config, { dev }) => {
-    config.optimization.minimize = false;
+    if (!dev) {
+      config.optimization.minimize = false;
+    }
     config.externals.push("pino-pretty", "lokijs", "encoding");
     return config;
   },
