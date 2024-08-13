@@ -1,7 +1,7 @@
 "use client";
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { ConnectBitcoin, Balances } from "@zetachain/universalkit";
+import { ConnectBitcoin } from "@zetachain/universalkit";
 import { Welcome } from "./welcome";
 
 const Page = () => {
@@ -11,10 +11,9 @@ const Page = () => {
         <ConnectBitcoin />
         <ConnectButton label="Connect EVM" showBalance={false} />
       </div>
+      <Welcome />
       <div className="flex justify-center">
-        <div className="w-[400px]">
-          <Balances></Balances>
-        </div>
+        <div className="w-[400px]">{/* Add components here */}</div>
       </div>
     </div>
   );
