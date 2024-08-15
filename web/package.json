@@ -10,7 +10,7 @@
   "dependencies": {
     "@rainbow-me/rainbowkit": "^2.1.3",
     "@tanstack/react-query": "^5.28.4",
-    "@zetachain/universalkit": "^1.0.0",
+    "@zetachain/universalkit": "^2.0.0",
     "autoprefixer": "^10.4.19",
     "next": "^14.2.3",
     "next-themes": "^0.3.0",
@@ -21,7 +21,6 @@
     "wagmi": "^2.10.10"
   },
   "devDependencies": {
-    "@types/node": "^18.19.3",
     "@types/react": "^18.3.0",
     "next": "^14.2.3",
     "typescript": "5.4.2"

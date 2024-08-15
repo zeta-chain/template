@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { WagmiProvider } from "wagmi";
+import { WagmiProvider, useChainId, useWalletClient } from "wagmi";
 import {
   RainbowKitProvider,
   darkTheme,
@@ -20,6 +20,14 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <RainbowKitProvider theme={rainbowKitTheme}>{children}</RainbowKitProvider>
+  );
+};
+
+const WagmiWrapper = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <UniversalKitProvider config={config} client={queryClient}>
+      {children}
+    </UniversalKitProvider>
   );
 };
 
@@ -41,9 +49,9 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
           enableSystem
           disableTransitionOnChange
         >
-          <ThemeProvider>
-            <UniversalKitProvider>{children}</UniversalKitProvider>
-          </ThemeProvider>
+          <WagmiWrapper>
+            <ThemeProvider>{children}</ThemeProvider>
+          </WagmiWrapper>
         </NextThemesProvider>
       </QueryClientProvider>
     </WagmiProvider>
