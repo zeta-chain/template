@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directories:
+      - "/web"
+      - "/contracts"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "dependabot: " 
+    labels:
+      - "dependencies" 
+    allow:
+      - dependency-name: "@zetachain/toolkit"
+      - dependency-name: "@zetachain/networks"
+      - dependency-name: "@zetachain/protocol-contracts"
+      - dependency-name: "@zetachain/universalkit"
+      - dependency-name: "@zetachain/localnet"
