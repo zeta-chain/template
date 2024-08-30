@@ -12,7 +12,4 @@ updates:
       - "dependencies" 
     allow:
       - dependency-name: "@zetachain/toolkit"
-      - dependency-name: "@zetachain/networks"
-      - dependency-name: "@zetachain/protocol-contracts"
       - dependency-name: "@zetachain/universalkit"
-      - dependency-name: "@zetachain/localnet"
