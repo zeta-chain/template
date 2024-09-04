@@ -1615,22 +1615,22 @@
     typescript "5.5.4"
     zod "3.22.4"
 
-"@zetachain/networks@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@zetachain/networks/-/networks-7.0.0.tgz#a5f8a188d633e2064ee7c77499351381ba891441"
-  integrity sha512-/amSq+KNJe+EGj0ioZS+DZJtsnbPSDotp9LsrAbaEVMAxKvBK/XkvggH73sJyRWWeMpfhHrNPlrKTLrN+mRkIg==
+"@zetachain/networks@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@zetachain/networks/-/networks-9.0.0.tgz#59eddb02578d784a1d76299ead600dffce87f48c"
+  integrity sha512-vCSkzyiubgYHK0NAJFFCv9gQziGrB+BT9q6DEu29owWxHcGLHPbI4VJ5PbkWH+z8pExVSDe2wKxGN5l2ZAcbGA==
   dependencies:
     dotenv "^16.1.4"
 
-"@zetachain/protocol-contracts@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-7.0.0.tgz#20eb6c62d805d7470408ccdff0e3614684bca174"
-  integrity sha512-8JTNFZxVZYmDtAXJIEr+tkakuML12X42Fya4bJ1NkfWiVMkcSej92BSTl/35qYtHdjY7vXy9uMrfXEqfw5rsPw==
+"@zetachain/protocol-contracts@8.0.0-rc1":
+  version "8.0.0-rc1"
+  resolved "https://registry.yarnpkg.com/@zetachain/protocol-contracts/-/protocol-contracts-8.0.0-rc1.tgz#34df589c1b56df77f2695b37bd8a4b79df1787b1"
+  integrity sha512-VpgbQtVUxy4XYFb0P9UN9nQZkhQ+fr3Bg7A5SqZJCH3fi8QELSn6qaVSwATn+mXdnSMD2uXWSnyy/ANXFqedmw==
 
-"@zetachain/toolkit@^10.0.0":
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-10.0.0.tgz#aceb196d139d7c697e20a48012e0674130e1c0b9"
-  integrity sha512-+Gk5lokCWfqK4Nhm3+TjQb9EgrEyuHcezzxDwvvfjohB0dBor+aRnRyNO1/9+eTqX45M0Cvx4tS51yJCGm0G/g==
+"@zetachain/toolkit@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@zetachain/toolkit/-/toolkit-12.0.0.tgz#383b0ea165ca417ede01beb7617aa04aee7d82d4"
+  integrity sha512-3ZIXHaI3OMf7bAp91bryalmq6HEvYFjG8wTNjCGqyBYaK6oQafgH8+zkgrVotm6LmO9EDOZd2E1L4sPOyFS7Mw==
   dependencies:
     "@inquirer/prompts" "^2.1.1"
     "@inquirer/select" "1.1.3"
@@ -1638,8 +1638,8 @@
     "@openzeppelin/contracts" "^4.9.6"
     "@uniswap/v2-periphery" "^1.1.0-beta.0"
     "@zetachain/faucet-cli" "^4.0.1"
-    "@zetachain/networks" "7.0.0"
-    "@zetachain/protocol-contracts" "7.0.0"
+    "@zetachain/networks" "^9.0.0"
+    "@zetachain/protocol-contracts" "8.0.0-rc1"
     axios "^1.4.0"
     bech32 "^2.0.0"
     bip39 "^3.1.0"
