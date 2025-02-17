@@ -1,5 +1,8 @@
 # ZetaChain Template
 
+> [!WARNING]  
+> The template has been deprecated, please, check out the [zeta-chain/examples-contracts](https://github.com/zeta-chain/example-contracts) repo for up-to-date examples and templates.
+
 [ZetaChain](https://www.zetachain.com) is a blockchain for [universal
 apps](https://www.zetachain.com/docs/developers/apps/intro/) that span across
 any blockchain, from Ethereum and Cosmos to Bitcoin and beyond.
